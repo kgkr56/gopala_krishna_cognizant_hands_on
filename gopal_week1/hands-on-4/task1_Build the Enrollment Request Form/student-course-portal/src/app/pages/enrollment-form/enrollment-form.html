@@ -1,0 +1,86 @@
+<!--
+  Task 1 — Build the Enrollment Request Form
+  ==========================================
+  Step 39: Each field uses [(ngModel)] for two-way binding and a name attribute.
+  The name attribute is MANDATORY in template-driven forms — Angular uses it as
+  the key in form.value (e.g., form.value.studentName).
+
+  Step 38/41: #enrollForm='ngForm' is the NgForm directive reference.
+  It lets us pass the whole form to onSubmit and disable the submit button
+  while the form is invalid.
+
+  NOTE: #enrollForm='ngForm' gives access to the NgForm instance — you can use
+  enrollForm.valid, enrollForm.reset(), or individual control states via
+  enrollForm.controls['studentName'].
+-->
+<section class="form-page">
+  <h1>Course Enrollment Request</h1>
+
+  <form #enrollForm="ngForm" (ngSubmit)="onSubmit(enrollForm)" novalidate>
+
+    <!-- Student Name -->
+    <div class="form-group">
+      <label for="studentName">Student Name</label>
+      <input
+        id="studentName"
+        type="text"
+        name="studentName"
+        [(ngModel)]="studentName"
+        placeholder="Enter your full name"
+      />
+    </div>
+
+    <!-- Student Email -->
+    <div class="form-group">
+      <label for="studentEmail">Student Email</label>
+      <input
+        id="studentEmail"
+        type="email"
+        name="studentEmail"
+        [(ngModel)]="studentEmail"
+        placeholder="Enter your email"
+      />
+    </div>
+
+    <!-- Course ID -->
+    <div class="form-group">
+      <label for="courseId">Course ID</label>
+      <input
+        id="courseId"
+        type="number"
+        name="courseId"
+        [(ngModel)]="courseId"
+        placeholder="Enter course ID"
+      />
+    </div>
+
+    <!-- Preferred Semester -->
+    <div class="form-group">
+      <label for="preferredSemester">Preferred Semester</label>
+      <select id="preferredSemester" name="preferredSemester" [(ngModel)]="preferredSemester">
+        <option value="">-- Select --</option>
+        <option value="Odd">Odd</option>
+        <option value="Even">Even</option>
+      </select>
+    </div>
+
+    <!-- Agree to Terms -->
+    <div class="form-group checkbox-group">
+      <input
+        id="agreeToTerms"
+        type="checkbox"
+        name="agreeToTerms"
+        [(ngModel)]="agreeToTerms"
+      />
+      <label for="agreeToTerms">I agree to the terms and conditions</label>
+    </div>
+
+    <!-- Step 41: Submit button disabled while form is invalid -->
+    <div class="form-actions">
+      <button type="submit" [disabled]="enrollForm.invalid" class="btn-submit">
+        Submit
+      </button>
+    </div>
+
+  </form>
+</section>
