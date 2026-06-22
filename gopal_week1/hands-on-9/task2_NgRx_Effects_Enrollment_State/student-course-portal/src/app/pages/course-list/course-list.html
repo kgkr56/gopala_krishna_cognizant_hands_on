@@ -1,0 +1,46 @@
+<!--
+  Steps 96, 98, 100: CourseList Template
+  ========================================
+  Using the async pipe for ALL observables:
+    - courses$      → renders the card grid
+    - loading$      → shows spinner
+    - error$        → shows error banner
+    - enrolledIds$  → passed to each CourseCard as @Input
+
+  Step 100 pattern from the exercise brief:
+    {{ (enrolledIds$ | async)?.includes(course.id) ? 'Unenroll' : 'Enroll' }}
+  Here we resolve enrolledIds$ in the parent and pass the array down to
+  CourseCard[@Input enrolledIds] to keep the template clean.
+-->
+<section class="course-list-page">
+  <h1>Course List</h1>
+  <p class="subtitle">Powered by NgRx Effects — watch the Redux DevTools action stream.</p>
+
+  <!-- Loading indicator -->
+  <div *ngIf="loading$ | async" class="loading-msg">
+    ⏳ Loading courses...
+  </div>
+
+  <!-- Error banner -->
+  <div *ngIf="error$ | async as error" class="error-banner" role="alert">
+    ⚠️ {{ error }}
+  </div>
+
+  <!--
+    Unwrap enrolledIds$ ONCE at the container level with *ngIf as a binding.
+    Pass it down to each card so cards don't open their own store subscriptions.
+  -->
+  <ng-container *ngIf="enrolledIds$ | async as enrolledIds">
+    <div class="course-grid" *ngIf="!(loading$ | async)">
+      <app-course-card
+        *ngFor="let course of courses$ | async"
+        [course]="course"
+        [enrolledIds]="enrolledIds"
+      ></app-course-card>
+    </div>
+  </ng-container>
+
+  <p *ngIf="!(loading$ | async) && (courses$ | async)?.length === 0 && !(error$ | async)" class="empty-msg">
+    No courses found.
+  </p>
+</section>

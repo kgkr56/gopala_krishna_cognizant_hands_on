@@ -1,0 +1,21 @@
+<section class="profile-page">
+  <h1>Student Profile</h1>
+  <h2>My Enrolled Courses</h2>
+
+  <!--
+    selectEnrolledCourses is a cross-slice selector (Step 99):
+    It joins courses[] from the course slice with enrolledCourseIds[] from
+    the enrollment slice — no duplication of state needed.
+  -->
+  <div *ngIf="(enrolledCourses$ | async)?.length === 0" class="empty-msg">
+    You have not enrolled in any courses yet. Go to <a routerLink="/courses">Courses</a>.
+  </div>
+
+  <ul class="enrolled-list">
+    <li *ngFor="let course of enrolledCourses$ | async" class="enrolled-item">
+      <strong>{{ course.name }}</strong>
+      <span class="code">{{ course.code }}</span>
+      <span [class]="'badge badge-' + course.gradeStatus">{{ course.gradeStatus }}</span>
+    </li>
+  </ul>
+</section>
