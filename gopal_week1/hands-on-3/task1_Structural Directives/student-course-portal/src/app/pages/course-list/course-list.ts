@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseCard } from '../../components/course-card/course-card';
 import { Course } from '../../models/course.model';
@@ -14,6 +14,8 @@ export class CourseList implements OnInit {
   // Step 25: isLoading controls the loading state shown via *ngIf.
   // Initially true — the loading message is rendered; the course grid is not.
   isLoading = true;
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   selectedCourseId: number | null = null;
 
@@ -33,6 +35,7 @@ export class CourseList implements OnInit {
     // loading message from the DOM and adds the course grid in its place.
     setTimeout(() => {
       this.isLoading = false;
+      this.cdr.detectChanges();
     }, 1500);
   }
 

@@ -1,0 +1,10 @@
+[debug] [vite] connecting...
+[debug] [vite] connected.
+[log] Angular is running in development mode.
+[log] HomeComponent initialised
+[debug] [vite] connecting...
+[log] Angular is running in development mode.
+[debug] [vite] connected.
+[debug] [vite] connecting...
+[log] Angular is running in development mode.
+[debug] [vite] connected.

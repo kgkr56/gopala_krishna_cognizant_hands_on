@@ -1,0 +1,11 @@
+[DEBUG] [vite] connecting...
+[DEBUG] [vite] connected.
+[LOG] Angular is running in development mode.
+[LOG] HomeComponent initialised
+[ERROR] Failed to load resource: the server responded with a status of 404 (Not Found)
+[DEBUG] [vite] connecting...
+[LOG] Angular is running in development mode.
+[DEBUG] [vite] connected.
+[DEBUG] [vite] connecting...
+[LOG] Angular is running in development mode.
+[DEBUG] [vite] connected.
