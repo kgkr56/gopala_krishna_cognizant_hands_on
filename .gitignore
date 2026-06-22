@@ -23,6 +23,7 @@ Thumbs.db
 
 # Output screenshots and other artifacts
 output_screenshots/
+!**/output_screenshots/.gitkeep
 
 # Lock files
 package-lock.json
