@@ -1,0 +1,13 @@
+<article class="course-card" [class.enrolled]="isEnrolled">
+  <div class="card-badge" *ngIf="isEnrolled">✓ Enrolled</div>
+  <h3>{{ course.name }}</h3>
+  <p><strong>Code:</strong> {{ course.code }}</p>
+  <p><strong>Credits:</strong> {{ course.credits }}</p>
+  <p>
+    <strong>Status:</strong>
+    <span [class]="'badge badge-' + course.gradeStatus">{{ course.gradeStatus }}</span>
+  </p>
+  <button type="button" class="btn-enroll" [class.btn-unenroll]="isEnrolled" (click)="onEnrollClick()">
+    {{ isEnrolled ? 'Unenroll' : 'Enroll' }}
+  </button>
+</article>

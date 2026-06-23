@@ -1,0 +1,6 @@
+.course-list-page { padding: 2rem; max-width: 960px; margin: 0 auto; }
+.course-list-page h1 { color: #1a237e; margin-bottom: 1.5rem; }
+.course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.loading-msg { padding: 1rem; color: #1565c0; }
+.error-banner { padding: 1rem; background: #ffebee; border-radius: 6px; color: #c62828; margin-bottom: 1rem; }
+.empty-msg { color: #777; font-style: italic; }
