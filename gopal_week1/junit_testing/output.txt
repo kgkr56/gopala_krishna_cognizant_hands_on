@@ -1,0 +1,18 @@
+--- Test Started ---
+testAdd: 10 + 5 = 15
+--- Test Completed ---
+
+--- Test Started ---
+testSubtract: 10 - 5 = 5
+--- Test Completed ---
+
+--- Test Started ---
+testMultiply: 10 * 5 = 50
+--- Test Completed ---
+
+--- Test Started ---
+testDivide: 10 / 5 = 2.0
+--- Test Completed ---
+
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+BUILD SUCCESS
