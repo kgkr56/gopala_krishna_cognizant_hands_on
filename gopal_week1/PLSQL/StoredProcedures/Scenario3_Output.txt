@@ -1,0 +1,18 @@
+=== Fund Transfer ===
+------------------------------------------------------
+From Account : 3001 (Gopal Krishna)
+To Account   : 3002 (Ramesh Kumar)
+Amount       : $10000
+------------------------------------------------------
+Transfer Successful!
+Gopal Krishna new balance: $40000
+------------------------------------------------------
+
+=== Fund Transfer ===
+------------------------------------------------------
+From Account : 3003 (Suresh Babu)
+To Account   : 3002 (Ramesh Kumar)
+Amount       : $100000
+------------------------------------------------------
+ERROR: Insufficient balance!
+Available Balance: $5000 | Requested: $100000

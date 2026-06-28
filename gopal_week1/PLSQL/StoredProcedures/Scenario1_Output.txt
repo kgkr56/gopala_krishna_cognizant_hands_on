@@ -1,0 +1,9 @@
+=== Process Monthly Interest for Savings Accounts ===
+------------------------------------------------------
+Account  : 1001 | Customer: Gopal Krishna | Old Balance: $50000 | Interest: $500   | New Balance: $50500
+Account  : 1002 | Customer: Ramesh Kumar  | Old Balance: $30000 | Interest: $300   | New Balance: $30300
+Account  : 1003 | Customer: Suresh Babu   | Old Balance: $20000 | Interest: $200   | New Balance: $20200
+Account  : 1004 | Customer: Anitha Devi   | Old Balance: $75000 | Interest: $750   | New Balance: $75750
+Account  : 1005 | Customer: Vijay Mohan   | Old Balance: $10000 | Interest: $100   | New Balance: $10100
+------------------------------------------------------
+Monthly interest processed successfully for all savings accounts.
