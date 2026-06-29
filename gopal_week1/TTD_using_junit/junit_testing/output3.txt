@@ -1,0 +1,29 @@
+=== TearDown Method Test Output ===
+
+========================================
+   TearDown Method Test Suite Started
+========================================
+
+--- [Setup] Calculator initialized ---
+[Test] testAdd: 10 + 5 = 15 PASSED
+--- [Teardown] Calculator destroyed ---
+
+--- [Setup] Calculator initialized ---
+[Test] testSubtract: 10 - 3 = 7 PASSED
+--- [Teardown] Calculator destroyed ---
+
+--- [Setup] Calculator initialized ---
+[Test] testMultiply: 4 * 5 = 20 PASSED
+--- [Teardown] Calculator destroyed ---
+
+--- [Setup] Calculator initialized ---
+[Test] testDivide: 20 / 4 = 5.0 PASSED
+--- [Teardown] Calculator destroyed ---
+
+========================================
+   TearDown Method Test Suite Completed
+========================================
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+BUILD SUCCESS
