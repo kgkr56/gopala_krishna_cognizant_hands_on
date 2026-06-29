@@ -1,0 +1,16 @@
+=== JUnit Assertions Test Output ===
+
+--- Test Started ---
+assertEquals PASSED : 2 + 3 = 5
+assertTrue PASSED   : 5 > 3 is true
+assertFalse PASSED  : 5 < 3 is false
+assertNull PASSED   : object is null
+assertNotNull PASSED: object is not null
+assertArrayEquals PASSED: arrays are equal
+assertSame PASSED   : same object reference
+assertNotSame PASSED: different object references
+--- Test Completed ---
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+BUILD SUCCESS
