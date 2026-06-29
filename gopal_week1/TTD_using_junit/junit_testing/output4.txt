@@ -1,0 +1,23 @@
+=== Mockito - Mocking and Stubbing Test Output ===
+
+--- [Setup] Mock object created ---
+[Mock] testExternalApi     : result = Mock Data PASSED
+[Mock] verify getData()    : called 1 time PASSED
+--- [Teardown] Mock object destroyed ---
+
+--- [Setup] Mock object created ---
+[Mock] testGetUserById     : user1 = Gopal Krishna PASSED
+[Mock] testGetUserById     : user2 = Ramesh Kumar PASSED
+--- [Teardown] Mock object destroyed ---
+
+--- [Setup] Mock object created ---
+[Mock] testServiceAvailable: status = Service is UP PASSED
+--- [Teardown] Mock object destroyed ---
+
+--- [Setup] Mock object created ---
+[Mock] testServiceDown     : status = Service is DOWN PASSED
+--- [Teardown] Mock object destroyed ---
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+BUILD SUCCESS
