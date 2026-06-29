@@ -1,0 +1,25 @@
+=== Mockito - Verifying Interactions Test Output ===
+
+--- [Setup] Mock object created ---
+[Verify] testVerifyInteraction : getData() called PASSED
+--- [Teardown] Mock object destroyed ---
+
+--- [Setup] Mock object created ---
+[Verify] testVerifyCalledTimes : getData() called 3 times PASSED
+--- [Teardown] Mock object destroyed ---
+
+--- [Setup] Mock object created ---
+[Verify] testVerifyNeverCalled : getData() never called PASSED
+--- [Teardown] Mock object destroyed ---
+
+--- [Setup] Mock object created ---
+[Verify] testVerifyWithArgument: getUserById(101) called PASSED
+--- [Teardown] Mock object destroyed ---
+
+--- [Setup] Mock object created ---
+[Verify] testVerifyAtLeastOnce : getData() called at least once PASSED
+--- [Teardown] Mock object destroyed ---
+
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+
+BUILD SUCCESS
