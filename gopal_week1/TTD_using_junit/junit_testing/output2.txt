@@ -1,0 +1,33 @@
+=== AAA Pattern Test Output ===
+
+========================================
+   AAA Pattern Test Suite Started
+========================================
+
+--- [Setup] Calculator initialized ---
+[AAA] testAdd        : 10 + 5 = 15 PASSED
+--- [Teardown] Calculator destroyed ---
+
+--- [Setup] Calculator initialized ---
+[AAA] testSubtract   : 10 - 3 = 7 PASSED
+--- [Teardown] Calculator destroyed ---
+
+--- [Setup] Calculator initialized ---
+[AAA] testMultiply   : 4 * 5 = 20 PASSED
+--- [Teardown] Calculator destroyed ---
+
+--- [Setup] Calculator initialized ---
+[AAA] testDivide     : 20 / 4 = 5.0 PASSED
+--- [Teardown] Calculator destroyed ---
+
+--- [Setup] Calculator initialized ---
+[AAA] testDivideByZero: Exception thrown PASSED
+--- [Teardown] Calculator destroyed ---
+
+========================================
+   AAA Pattern Test Suite Completed
+========================================
+
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+
+BUILD SUCCESS
