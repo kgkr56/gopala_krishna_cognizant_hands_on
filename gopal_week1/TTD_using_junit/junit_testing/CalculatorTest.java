@@ -1,5 +1,5 @@
 
-package gopal_week1.junit_testing;
+package gopal_week1.TTD_using_junit.junit_testing;
 
 import org.junit.Test;
 import org.junit.Before;

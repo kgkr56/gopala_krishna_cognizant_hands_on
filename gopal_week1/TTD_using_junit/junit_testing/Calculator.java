@@ -1,6 +1,6 @@
-package gopal_week1.junit_testing;
+package gopal_week1.TTD_using_junit.junit_testing;
 
-// Simple Calculator class to demonstrate JUnit testing
+
 public class Calculator {
 
     // Add two numbers

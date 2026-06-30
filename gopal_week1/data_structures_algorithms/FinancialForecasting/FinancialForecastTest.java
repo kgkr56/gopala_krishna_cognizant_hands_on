@@ -1,7 +1,5 @@
 package gopal_week1.data_structures_algorithms.FinancialForecasting;
 
-
-
 public class FinancialForecastTest {
 
     public static void main(String[] args) {
