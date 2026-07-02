@@ -1,0 +1,9 @@
+=================================================
+   Hands on 4 - Load Country from Spring XML
+=================================================
+Inside displayCountry
+Inside Country Constructor.
+Inside setCode. code=IN
+Inside setName. name=India
+Country : Country [code=IN, name=India]
+=================================================

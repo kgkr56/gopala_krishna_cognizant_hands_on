@@ -1,0 +1,7 @@
+=================================================
+   Hands on 1 - Spring Web Project Output
+=================================================
+Tomcat started on port(s): 8080 (http) with context path ''
+Started SpringLearnApplication in 1.702 seconds
+Inside main - SpringLearnApplication started successfully!
+=================================================
