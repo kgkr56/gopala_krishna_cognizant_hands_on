@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SLF4J_Logging" />
+        <module name="spring-learn (1)" />
+        <module name="orm-learn" />
+        <module name="country-web-service" />
+        <module name="hello-world-restful-web-service" />
+        <module name="LibraryManagement" />
+        <module name="jwt-auth-service" />
+        <module name="country-web-service (1)" />
+        <module name="spring-learn" />
+        <module name="JUnitMockito" />
+        <module name="LibraryManagement (1)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="country-web-service" options="-parameters" />
+      <module name="country-web-service (1)" options="-parameters" />
+      <module name="hello-world-restful-web-service" options="-parameters" />
+      <module name="jwt-auth-service" options="-parameters" />
+      <module name="orm-learn" options="-parameters" />
+      <module name="spring-learn" options="-parameters" />
+      <module name="spring-learn (1)" options="-parameters" />
+    </option>
+  </component>
+</project>

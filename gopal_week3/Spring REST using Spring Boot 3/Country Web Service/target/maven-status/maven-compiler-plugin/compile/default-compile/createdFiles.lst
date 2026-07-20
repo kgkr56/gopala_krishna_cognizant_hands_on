@@ -1,3 +1,4 @@
 com\cognizant\springlearn\controller\CountryApplication.class
 com\cognizant\springlearn\controller\CountryController.class
+com\cognizant\springlearn\service\CountryService.class
 com\cognizant\springlearn\Country.class

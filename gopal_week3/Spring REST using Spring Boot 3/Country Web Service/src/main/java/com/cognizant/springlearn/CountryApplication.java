@@ -1,4 +1,4 @@
-package com.cognizant.springlearn.controller;
+package com.cognizant.springlearn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

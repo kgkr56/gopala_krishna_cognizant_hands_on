@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/gopal_week2/spring_core_and_maven/MavenProjectSetup/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week2/spring_core_and_maven/MavenProjectSetup/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week2/spring_data_jpa/orm-learn/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Country Web Service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/CountryWebService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Hands-on-1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Hands-on-4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Hello World RESTful Web Service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/JwtAuthService/src/main/java" charset="UTF-8" />
+  </component>
+</project>

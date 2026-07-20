@@ -12,13 +12,17 @@ import java.util.Optional;
 public class CountryService {
 
     public Country getCountry(String code) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
-        List<Country> countries = (List<Country>) context.getBean("countries");
+        try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("country.xml")) {
+            Object bean = context.getBean("countries");
+            List<?> rawList = (bean instanceof List) ? (List<?>) bean : List.of();
 
-        Optional<Country> country = countries.stream()
+            Optional<Country> country = rawList.stream()
+                .filter(obj -> obj instanceof Country)
+                .map(obj -> (Country) obj)
                 .filter(c -> c.getCode() != null && c.getCode().equalsIgnoreCase(code))
                 .findFirst();
 
-        return country.orElse(null);
+            return country.orElse(null);
+        }
     }
 }

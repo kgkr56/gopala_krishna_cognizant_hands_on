@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/gopal_week1/SLF4J_Logging/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week1/TTD_using_junit/junit_testing/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week2/spring_data_jpa/orm-learn/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week2/spring_core_and_maven/LibraryManagement/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week2/spring_core_and_maven/MavenProjectSetup/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Hands-on-1/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Hands-on-4/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/JwtAuthService/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/CountryWebService/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Country Web Service/pom.xml" />
+        <option value="$PROJECT_DIR$/gopal_week3/Spring REST using Spring Boot 3/Hello World RESTful Web Service/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
