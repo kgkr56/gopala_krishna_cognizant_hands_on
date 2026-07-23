@@ -1,0 +1,37 @@
+.score-card {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background-color: #f4fdf4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.score-card h2 {
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.score-card p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.score-card .label {
+  font-weight: bold;
+  color: #1b5e20;
+  margin-right: 6px;
+}
+
+.score-card .average {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #4CAF50;
+  font-size: 18px;
+  color: #d32f2f;
+}
