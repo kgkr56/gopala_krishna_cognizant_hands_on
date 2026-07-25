@@ -1,0 +1,1 @@
+{"courses":[{"id":1,"name":"Introduction to Angular","code":"ANG101","credits":3,"gradeStatus":"passed"},{"id":2,"name":"Reactive Programming","code":"RXJ202","credits":4,"gradeStatus":"pending"}],"students":[{"id":1,"name":"Alice"},{"id":2,"name":"Bob"}],"enrollments":[{"id":1,"courseId":1,"studentId":1},{"id":2,"courseId":2,"studentId":2}]}

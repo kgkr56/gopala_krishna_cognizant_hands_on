@@ -1,0 +1,26 @@
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a237e;
+  color: #fff;
+}
+
+.header-nav .brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.header-nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}

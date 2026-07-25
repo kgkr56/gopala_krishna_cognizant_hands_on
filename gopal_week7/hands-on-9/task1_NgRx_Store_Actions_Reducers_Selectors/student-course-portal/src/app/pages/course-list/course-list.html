@@ -1,0 +1,47 @@
+<!--
+  Step 96: CourseListComponent Template
+  ======================================
+  The async pipe handles subscription and unsubscription automatically.
+  It also re-renders only when the Observable emits a new value.
+
+  Flow visible in Redux DevTools:
+    1. [Course] Load Courses   — dispatched from ngOnInit
+    2. loading = true           — reducer handles loadCourses action
+    3. [Course] Load Courses Success — Effect dispatches after 600ms
+    4. loading = false, courses populated — reducer handles success action
+-->
+<section class="course-list-page">
+  <h1>Course List</h1>
+  <p class="subtitle">State managed by NgRx Store — watch Redux DevTools as you load.</p>
+
+  <!-- Loading indicator -->
+  <div *ngIf="loading$ | async" class="loading-msg">
+    ⏳ Loading courses from store...
+  </div>
+
+  <!-- Error banner -->
+  <div *ngIf="error$ | async as error" class="error-banner" role="alert">
+    ⚠️ {{ error }}
+  </div>
+
+  <!-- Course grid — renders via selectAllCourses selector -->
+  <div class="course-grid" *ngIf="!(loading$ | async)">
+    <article
+      *ngFor="let course of courses$ | async"
+      class="course-card"
+    >
+      <h3>{{ course.name }}</h3>
+      <p><strong>Code:</strong> {{ course.code }}</p>
+      <p><strong>Credits:</strong> {{ course.credits }}</p>
+      <p>
+        <strong>Status:</strong>
+        <span [class]="'badge badge-' + course.gradeStatus">{{ course.gradeStatus }}</span>
+      </p>
+    </article>
+  </div>
+
+  <!-- Empty state -->
+  <p *ngIf="!(loading$ | async) && (courses$ | async)?.length === 0 && !(error$ | async)" class="empty-msg">
+    No courses found.
+  </p>
+</section>

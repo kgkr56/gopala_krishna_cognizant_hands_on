@@ -1,0 +1,38 @@
+HANDS-ON 9 — Task 1: NgRx Store, Actions, Reducers & Selectors
+==============================================================
+
+INSTALL COMMAND (run in this folder):
+  npm install @ngrx/store @ngrx/effects @ngrx/entity @ngrx/store-devtools
+
+BROWSER EXTENSION:
+  Install "Redux DevTools" from Chrome/Firefox extension store.
+
+WHAT WAS BUILT
+--------------
+store/course/
+  course.actions.ts   — Step 93: loadCourses, loadCoursesSuccess, loadCoursesFailure
+  course.reducer.ts   — Step 94: CourseState interface + createReducer with on() handlers
+  course.selectors.ts — Step 95: selectCourseState, selectAllCourses, selectCoursesLoading, selectCoursesError
+
+app.config.ts
+  — Step 92: provideStore({}) registers the root store
+  — Step 95: provideState('course', courseReducer) registers the feature slice
+  — Step 92: provideStoreDevtools({ maxAge: 25 }) enables Redux DevTools
+
+pages/course-list/
+  — Step 96: dispatches loadCourses() on ngOnInit
+  — selects courses$, loading$, error$ via store.select()
+  — renders via async pipe (no manual subscribe/unsubscribe)
+
+KEY CONCEPTS
+------------
+[Course] prefix convention   — groups actions by feature in DevTools timeline
+Selectors + memoisation      — only recompute when input slice changes
+async pipe                   — subscribes, unsubscribes, and triggers CD automatically
+Pure reducer                 — no side effects; only action + state → next state
+
+EXPECTED DEVTOOLS TIMELINE (on /courses load)
+---------------------------------------------
+  @ngrx/store/init
+  [Course] Load Courses          ← dispatched from ngOnInit
+  [Course] Load Courses Success  ← dispatched after 600ms simulated delay

@@ -1,0 +1,56 @@
+HANDS-ON 9 — Task 2: NgRx Effects + Enrollment State
+======================================================
+
+INSTALL COMMAND (run in this folder):
+  npm install @ngrx/store @ngrx/effects @ngrx/entity @ngrx/store-devtools
+
+BROWSER EXTENSION:
+  Install "Redux DevTools" from Chrome/Firefox extension store.
+
+WHAT WAS BUILT
+--------------
+store/course/course.effects.ts
+  — Step 97: loadCourses$ Effect
+  — ofType(loadCourses) → switchMap → getCourses() → map success | catchError failure
+  — CourseEffects registered via provideEffects([CourseEffects]) in app.config.ts
+
+store/enrollment/enrollment.actions.ts
+  — Step 99: enrollInCourse, unenrollFromCourse, setEnrolledCourses
+
+store/enrollment/enrollment.reducer.ts
+  — Step 99: EnrollmentState { enrolledCourseIds: number[] }
+  — Immutable array mutations via spread + filter
+
+store/enrollment/enrollment.selectors.ts
+  — Step 99: selectEnrolledIds — simple selector
+  — selectEnrolledCourses — CROSS-SLICE selector combining course + enrollment slices
+
+components/course-card/
+  — Step 100: @Input() enrolledIds; dispatches enrollInCourse/unenrollFromCourse
+
+pages/student-profile/
+  — Displays enrolled courses using cross-slice selectEnrolledCourses selector
+
+KEY CONCEPTS
+------------
+Effects are side-effect handlers only        — reducers remain pure
+switchMap cancels in-flight HTTP calls       — use for "latest wins" scenarios
+catchError inside inner Observable           — keeps outer Effects stream alive
+Cross-slice selectors                        — join state slices without duplicating data
+async pipe everywhere                        — automatic subscribe/unsubscribe + CD
+
+STEP 98 — FULL FLOW (verify in Redux DevTools):
+-----------------------------------------------
+  @ngrx/store/init
+  [Course] Load Courses              ← dispatched from CourseList.ngOnInit
+  [Course] Load Courses Success      ← CourseEffects dispatches after 600ms
+    → courseReducer: loading=false, courses=[...]
+      → selectAllCourses emits
+        → async pipe triggers CD
+          → course cards render
+
+  [Enrollment] Enroll In Course      ← CourseCard dispatches on Enroll click
+    → enrollmentReducer: enrolledCourseIds=[..., courseId]
+      → selectEnrolledIds emits
+        → CourseCard button label switches to "Unenroll"
+        → StudentProfile enrolled list updates

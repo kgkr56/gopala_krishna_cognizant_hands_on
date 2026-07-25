@@ -1,0 +1,27 @@
+<section class="course-list-page">
+  <h1>Course List</h1>
+
+  <!-- Step 110: loading indicator — queried by '.loading-msg' in the MockStore test -->
+  <div *ngIf="loading$ | async" class="loading-msg">
+    ⏳ Loading courses...
+  </div>
+
+  <div *ngIf="error$ | async as error" class="error-banner" role="alert">
+    ⚠️ {{ error }}
+  </div>
+
+  <ng-container *ngIf="enrolledIds$ | async as enrolledIds">
+    <div class="course-grid" *ngIf="!(loading$ | async)">
+      <app-course-card
+        *ngFor="let course of courses$ | async"
+        [course]="course"
+        [isEnrolled]="enrolledIds.includes(course.id)"
+        (enrollRequested)="onEnrollRequested($event, enrolledIds)"
+      ></app-course-card>
+    </div>
+  </ng-container>
+
+  <p *ngIf="!(loading$ | async) && (courses$ | async)?.length === 0 && !(error$ | async)" class="empty-msg">
+    No courses found.
+  </p>
+</section>

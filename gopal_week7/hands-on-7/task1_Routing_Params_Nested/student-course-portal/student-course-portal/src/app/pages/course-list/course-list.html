@@ -1,0 +1,13 @@
+<section class="course-list-page">
+  <h1>Course List</h1>
+  <div class="search-row">
+    <input placeholder="Search" [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" />
+    <button type="button" class="btn-add" (click)="addCourse()">Add Course</button>
+  </div>
+
+  <div class="course-grid">
+    <div class="card-wrap" *ngFor="let course of courses" (click)="goToCourse(course.id)">
+      <app-course-card [course]="course"></app-course-card>
+    </div>
+  </div>
+</section>
